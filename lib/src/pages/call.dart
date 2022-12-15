@@ -62,7 +62,7 @@ class _CallPageState extends State<CallPage> {
     await _initAgoraRtcEngine();
     _addAgoraEventHandlers();
     VideoEncoderConfiguration configuration = VideoEncoderConfiguration();
-    configuration.dimensions = VideoDimensions(width: 1920, height: 1080);
+    configuration.dimensions = VideoDimensions(width: 800, height: 600);
     await _engine.setVideoEncoderConfiguration(configuration);
     await _engine.joinChannel(token, widget.channelName!, null, 0);
   }
